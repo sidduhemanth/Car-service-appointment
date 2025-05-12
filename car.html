@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCare - Car Service Appointment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-car"></i> AutoCare Center</h1>
+            <p>Professional car servicing with expert technicians</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="appointment-section">
+            <h2>Book Your Service Appointment</h2>
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="car-make">Car Make</label>
+                    <select id="car-make" name="car-make" required>
+                        <option value="">Select Make</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Ford">Ford</option>
+                        <option value="Chevrolet">Chevrolet</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Mercedes">Mercedes</option>
+                        <option value="Audi">Audi</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="car-model">Car Model</label>
+                    <input type="text" id="car-model" name="car-model" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="car-year">Car Year</label>
+                    <input type="number" id="car-year" name="car-year" min="1990" max="2025" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service-type">Service Type</label>
+                    <select id="service-type" name="service-type" required>
+                        <option value="">Select Service</option>
+                        <option value="Oil Change">Oil Change</option>
+                        <option value="Tire Rotation">Tire Rotation</option>
+                        <option value="Brake Service">Brake Service</option>
+                        <option value="Engine Diagnostic">Engine Diagnostic</option>
+                        <option value="Transmission Service">Transmission Service</option>
+                        <option value="Full Inspection">Full Inspection</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="appointment-date">Preferred Date</label>
+                    <input type="date" id="appointment-date" name="appointment-date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="appointment-time">Preferred Time</label>
+                    <input type="time" id="appointment-time" name="appointment-time" min="08:00" max="17:00" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" name="notes" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="btn">Book Appointment</button>
+            </form>
+        </section>
+        
+        <section class="services-section">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-oil-can"></i>
+                    <h3>Oil Change</h3>
+                    <p>Regular oil changes keep your engine running smoothly and extend its life.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tire"></i>
+                    <h3>Tire Services</h3>
+                    <p>Rotation, balancing, alignment, and replacement services for optimal performance.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Brake Service</h3>
+                    <p>Inspection, repair, and replacement of brake components for your safety.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-car-battery"></i>
+                    <h3>Battery Check</h3>
+                    <p>Testing and replacement of car batteries to prevent unexpected failures.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 AutoCare Center. All rights reserved.</p>
+            <p>Contact us: info@autocare.com | (555) 123-4567</p>
+        </div>
+    </footer>
+
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Appointment Confirmed!</h2>
+            <div id="confirmationDetails"></div>
+            <button id="printBtn" class="btn"><i class="fas fa-print"></i> Print Confirmation</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
